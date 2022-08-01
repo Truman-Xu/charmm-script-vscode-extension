@@ -1,0 +1,80 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "CHARMM",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#storages"
+		},
+		{
+			"include": "#supports"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.charmm",
+				"match": "\\b(if|for|label|goto|stop|bomlev|prnlev)\\b"
+			},
+			{
+				"name": "keyword.other.charmm",
+				"match": "\\b(ne|eq|lt|gt|le|ge|incr|by)\\b"
+			}
+		]
+		},
+		"storages": {
+			"patterns": [{
+				"name": "storage.type.charmm",
+				"match": "\\b(set|define|name|unit|scalar)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.charmm",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.charmm",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments":{
+			"name": "comment.line.charmm",
+			"begin": "!",
+			"end": "(?=\\n)"
+		},
+		"constants": {
+            "patterns": [
+                {
+                    "name": "constant.numeric.charmm",
+                    "match": "\\d"
+                }
+            ]
+        },
+		"supports": {
+            "patterns": [
+                {
+                    "name": "support.function.builtin.charmm",
+                    "match": "\\b(open|close|echo|calc|read|stream|delete)\\b"
+                },
+				{
+                    "name": "support.function.builtin.charmm",
+                    "match": "\\b(write|ic|print)\\b"
+                }
+            ]
+        }
+	},
+	"scopeName": "source.inp"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "charmm-script",
+  "displayName": "CHARMM Script",
+  "description": "Syntax Highlighting for CHARMM Script",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.69.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "charmm",
+      "aliases": ["CHARMM", "charmm"],
+      "extensions": [".inp"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "charmm",
+      "scopeName": "source.inp",
+      "path": "./syntaxes/charmm.tmLanguage.json"
+    }]
+  }
+}
