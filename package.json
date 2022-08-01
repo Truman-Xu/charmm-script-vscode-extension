@@ -21,5 +21,9 @@
       "scopeName": "source.inp",
       "path": "./syntaxes/charmm.tmLanguage.json"
     }]
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/Truman-Xu/charmm-script-vscode-extension.git"
   }
 }
